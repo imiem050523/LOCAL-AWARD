@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="script.js"></script>
+    <title>LOCAL AWARD | 中学生・高校生のための地域課題解決アワード</title>
+    <meta name="LOCAL AWARD | 中学生・高校生のための地域課題解決アワード" content="中学生・高校生が地域の課題解決に挑むLOCAL AWARD。魅力発信・防災安全・環境の3部門で作品を募集。応募無料、2026年11月30日締切。">
+    <link rel="icon" href="images/favicon.webp">
+
+</head>
+<body>
+    <header>
+        <div class="header-info">
+            <p>LOCAL AWARD</p>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li class="nav-desktop"><a href="#requirements">募集要項</a></li>
+                    <li class="nav-desktop"><a href="#past-works">過去受賞作品</a></li>
+                    <li><a href="#" class="button">応募する</a></li>
+                </ul>
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="メニューを開く"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                    data-menu-image="images/menu.png"
+                    data-close-image="images/close.png"
+                >
+                    <img src="images/menu.svg" alt="">
+                </button>
+
+               <ul class="mobile-menu" id="mobile-menu">
+                    <li class="mobile-menu-close">
+                        <button class="menu-close" type="button" aria-label="メニューを閉じる">
+                            <img src="images/close.svg" alt="">
+                        </button>
+                    </li>
+                    <li><a href="#requirements">募集要項</a></li>
+                    <li><a href="#past-works">過去受賞作品</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="scroll-gallery">
+        <div class="scroll-track">
+            <img src="images/thumbnail-01.webp">
+            <img src="images/thumbnail-02.webp">
+            <img src="images/thumbnail-03.webp">
+            <img src="images/thumbnail-04.webp">
+            <img src="images/thumbnail-05.webp">
+
+            <img src="images/thumbnail-01.webp">
+            <img src="images/thumbnail-02.webp">
+            <img src="images/thumbnail-03.webp">
+            <img src="images/thumbnail-04.webp">
+            <img src="images/thumbnail-05.webp">
+        </div>
+        <div class="fv-info" >
+            <div class="fv-text">
+                <p>中学生・高校生 / 応募無料 / 11月30日締切</p>
+                <h1>さぁ、きみの手で<br>地域の課題を解決せよ。</h1>
+            </div>
+            <img src="images/scroll-down.webp" alt="Scroll down">
+        </div>
+    </section>
+    <section class="infomation" id="requirements">
+        <div class="openings">
+            <h2>募集部門</h2>
+            <div class="openings-cards">
+                <div class="openings-card">
+                    <p class="o-number">01</p>
+                    <p class="o-category">魅力発信</p>
+                    <p class="o-discription">地域の人やお店、風景を知ってもらうための作品。</p>
+                </div>
+                <div class="openings-card">
+                    <p class="o-number">02</p>
+                    <p class="o-category">防災安全</p>
+                    <p class="o-discription">災害や日々の危険から身を守るための作品。</p>
+                </div>
+                <div class="openings-card">
+                    <p class="o-number">03</p>
+                    <p class="o-category">環境</p>
+                    <p class="o-discription">ゴミや自然環境の課題に取り組む作品。</p>
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            <h2>募集要項</h2>
+            <div class="description-cards">
+                <div class="description-card">
+                    <p class="d-info">応募期間</p>
+                    <p class="d-info-detail">2026年9月1日〜11月30日</p>
+                </div>
+                <div class="description-card">
+                    <p class="d-info">応募資格</p>
+                    <p class="d-info-detail">中学生・高校生</p>
+                </div>
+                <div class="description-card">
+                    <p class="d-info">応募料</p>
+                    <p class="d-info-detail">無料</p>
+                </div>
+                <div class="description-card">
+                    <p class="d-info">審査発表</p>
+                    <p class="d-info-detail">2026年12月20日</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="past-works" id="past-works">
+        <h2>過去受賞作品</h2>
+        <div class="filter-buttons">
+            <button class="is-active" data-filter="*">すべて</button>
+            <button data-filter=".appeal">魅力発信</button>
+            <button data-filter=".safety">防災安全</button>
+            <button data-filter=".environment">環境</button>
+        </div>   
+        <div class="past-works-cards">
+            <div class="past-works-card-big appeal">
+                <img src="images/thumbnail-05.webp" alt="">
+                <div class="past-works-card-text">
+                    <p class="p-category">魅力発信</p>
+                    <p class="p-title">地元の祭りを紹介する2分間のショート映像</p>
+                    <p class="p-name">中学１年・東美咲</p>
+                </div>
+            </div>
+            <div class="past-works-card appeal">
+                <img src="images/thumbnail-06.webp" alt="">
+                <div class="past-works-card-text">
+                    <p class="p-category">魅力発信</p>
+                    <p class="p-title">駅前観光マップのリデザイン</p>
+                    <p class="p-name">中学2年・林さくら</p>
+                </div>
+            </div>
+            <div class="past-works-card appeal">
+                <img src="images/thumbnail-07.webp" alt="">
+                <div class="past-works-card-text">
+                    <p class="p-category">魅力発信</p>
+                    <p class="p-title">シャッター商店街を案内図に変えるポスター</p>
+                    <p class="p-name">高校2年・佐野陽菜</p>
+                </div>
+            </div><div class="past-works-card safety">
+                <img src="images/thumbnail-08.webp" alt="">
+                <div class="past-works-card-text">
+                    <p class="p-category">防災安全</p>
+                    <p class="p-title">通学路危険個所をまとめた防災マップ</p>
+                    <p class="p-name">高校3年・岩本直樹</p>
+                </div>
+            </div><div class="past-works-card safety">
+                <img src="images/thumbnail-09.webp" alt="">
+                <div class="past-works-card-text">
+                    <p class="p-category">防災安全</p>
+                    <p class="p-title">避難所の場所が遠くからわかる誘導看板</p>
+                    <p class="p-name">高校１年・森田悠人</p>
+                </div>
+            </div><div class="past-works-card safety">
+                <img src="images/thumbnail-10.webp" alt="">
+                <div class="past-works-card-text">
+                    <p class="p-category">防災安全</p>
+                    <p class="p-title">高齢者に配る緊急連絡カードのデザイン</p>
+                    <p class="p-name">高校3年・川口千夏</p>
+                </div>
+            </div><div class="past-works-card environment">
+                <img src="images/thumbnail-04.webp" alt="">
+                <div class="past-works-card-text">
+                    <p class="p-category">環境</p>
+                    <p class="p-title">給食の食べ残しを減らす啓発ポスター</p>
+                    <p class="p-name">高校2年・宮下蓮</p>
+                </div>
+            </div><div class="past-works-card environment">
+                <img src="images/thumbnail-01.webp" alt="">
+                <div class="past-works-card-text">
+                    <p class="p-category">環境</p>
+                    <p class="p-title">海岸のゴミ拾いを１年間記録した映像</p>
+                    <p class="p-name">中学3年・大村優</p>
+                </div>
+            </div><div class="past-works-card environment">
+                <img src="images/thumbnail-02.webp" alt="">
+                <div class="past-works-card-text">
+                    <p class="p-category">環境</p>
+                    <p class="p-title">分別方法をすぐ調べられるWebサイト</p>
+                    <p class="p-name">中学2年・藤井湊</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <h4>LOCAL AWARD</h4>
+        <p>ローカルアワード運営事務局/ info@local-award.example</p>
+        <p>Photos by Rochelle Lee、note thanun、Stephanie Hau、Maccy、Jason Ortego、Yanhao Fang on Unsplash</p>
+        <p>© 2026 Local Award</p>
+    </footer>
+</body>
