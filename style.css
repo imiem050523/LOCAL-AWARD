@@ -4,14 +4,27 @@
     padding: 0;
 }
 
+:root {
+  --header-height: 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
 header {
+    height: var(--header-height);
+    padding: 0;
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 100;
     background-color: #fff;
     border-bottom: 1px solid #ccc;
-    padding: 10px 70px;
+    padding: 10px 0px;
 }
 
 header p {
@@ -26,7 +39,8 @@ header p {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-
+    height: 100%;
+    padding: 0;
 }
 
 .nav {
@@ -71,18 +85,30 @@ header p {
 .scroll-gallery {
   width: 100%;
   overflow: hidden;
-  margin: 20px 0;
+  margin: 0;
+  height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .scroll-track {
   display: flex;
   width: max-content;
   animation: scroll-left 20s linear infinite;
+  margin: 0px;
 }
 
 .scroll-gallery img {
   height: 250px; 
   margin-right: 20px;
+}
+
+.scroll-window {
+  width: 100%;
+  overflow: hidden;
 }
 
 @keyframes scroll-left {
@@ -97,8 +123,8 @@ header p {
 .fv-info{
     display: flex;
     justify-content: space-between;
-    height: 170px;
-    margin: 170px 70px 20px;
+    height: 200px;
+    margin: 0px auto;
 }
 
 .fv-text {
@@ -116,15 +142,12 @@ header p {
 }
 
 .fv-info img {
-    width: clamp(180px, 25vw, 420px);
-    height: auto;
-    margin-right: 10px;
-    object-fit: contain;
-    
+    width: auto;
+    height: 12rem;
 }
 
 .infomation {
-    padding: 60px 70px;
+    padding: 60px 0px;
     background-color: #222;
 }
 
@@ -143,10 +166,9 @@ h2 {
     padding: 30px 0;
 }
 .openings-cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
 }
 
 .openings-card {
@@ -156,7 +178,6 @@ h2 {
     background-color: #444141;
     width: 100%;
     height: 100%;
-    min-width: 200px;
     min-height: 20px;
     gap: 5px;
 }
@@ -211,7 +232,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 75px 75px;
+    margin: 75px 0px;
     border-top: 1px solid #ccc;
 }
 
@@ -311,9 +332,15 @@ footer h4 {
 }
 
 
+
 @media (max-width: 768px) {
+
+    .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
     header {
-        padding: 10px 20px;
+        padding: 10px 0px;
     }
 
     .header-info {
@@ -352,11 +379,6 @@ footer h4 {
     }
 
     .mobile-menu {
-        display: none;
-        list-style: none;
-    }
-
-    .mobile-menu.is-open {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -369,7 +391,18 @@ footer h4 {
         height: 100vh;
         height: 100dvh;
         padding: 20px;
-        background: rgba(255,255,255, 1);
+        list-style: none;
+        background: #fff;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .mobile-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .mobile-menu a {
@@ -412,17 +445,24 @@ footer h4 {
         width: auto;
         margin-right: 10px;
     }
+    :root {
+    --header-height: 64px;
+    }
 
+    .scroll-gallery {
+    height: auto;
+    min-height: calc(100svh - var(--header-height));
+    }
     
     .fv-info {
         height: auto;
-        margin: 80px 20px 20px;
+        margin: 0 auto;
         gap: 20px;
     }
 
 
     .infomation {
-        padding: 40px 20px;
+        padding: 40px 0px;
     }
 
     h2 {
@@ -430,8 +470,7 @@ footer h4 {
     }
 
     .openings-cards {
-        display: flex;
-        flex-direction: column;
+         grid-template-columns: 1fr
     }
 
 
@@ -443,7 +482,7 @@ footer h4 {
 
 
     .past-works {
-        margin: 40px 8px;
+        margin: 40px 0px;
         gap: 16px;
     }
 
